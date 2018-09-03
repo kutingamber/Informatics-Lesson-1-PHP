@@ -1,0 +1,24 @@
+<html>
+<head>
+<Title> Lesson 1 in Php </Title>
+</head>
+<Body>
+<Form action="" method="post">
+Name <input type="text" placeholder="Enter name" name="txtname" required> <br/>
+Age <input type="number" placeholder="Enter age" name="txtage" required> <br/>
+Birthday <input type="date" name="bday" required>
+Password <input type="password" name="pword" placeholder="Password" required>
+<input type="submit" value="Go!" name="btngo">
+</Form>
+
+<?php
+	if (isset($_POST["btngo"]))
+	{
+		echo "Hello ".$_POST["txtname"]." you are ".$_POST["txtage"]."yrs old";
+		echo"<table border='1'>"; 
+		echo"<tr> <td>".$_POST["txtname"]."</td></tr>";
+			echo"</table>";
+	}
+?>
+</Body>
+</html>
