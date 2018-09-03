@@ -1,0 +1,48 @@
+<html>
+<head>
+<Title> Lesson 1 in Php </Title>
+</head>
+<Body>
+<Form action="" method="post">
+Lastname <input type="text" placeholder="Enter Last name" name="lname" required> <br/>
+Firstname <input type="text" placeholder="Enter First name" name="fname" required> <br/>
+Gross Pay <input type="number" placeholder="Enter Gross pay" name="gpay" required> <br/>
+Deduction <input type="number" placeholder="Enter Deduction" name="deduction" required> <br/>
+
+<input type="submit" value="Compute" name="compute">
+</Form>
+
+<?php
+
+	if (isset($_POST["compute"]))
+	{
+	$a=$_POST["gpay"];
+	$b=$_POST["deduction"];
+	$c=$a-$b;
+
+		echo"<table border='1'>"; 
+		echo"<tr> 
+				<td>Lastname</td>
+				<td>".$_POST["lname"]." </td>
+			</tr>";
+		echo"<tr>
+				<td>Firstname</td> 
+				<td>".$_POST["fname"]." </td>
+			</tr>";
+		echo"<tr>
+				<td>Grosspay</td> 
+				<td>".$_POST["gpay"]." </td>
+			</tr>";
+		echo"<tr>
+				<td>Deduction</td> 
+				<td>".$_POST["deduction"]." </td>
+			</tr>";	
+		echo"<tr>
+				<td>NetPay</td> 
+				<td>".$c." </td>
+			</tr>";	
+		echo"</table>";
+	}
+?>
+</Body>
+</html>
