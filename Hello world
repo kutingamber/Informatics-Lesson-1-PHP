@@ -1,0 +1,24 @@
+<html>
+<head>
+<title> Lesson 1 in Php </title>
+</head>
+<body>
+<?php
+$pangalan="Jem";
+$school="Informatics";
+$age=18;
+$a=5;$b=2;$c=$a+$b;
+echo "Hello <u>".$pangalan."</u> studying at ".$school; 
+echo "<br/>You are ".$age." years old";
+echo "<br/>The sum of <b><i><u>".$a."</u></i></b> and ".$b." is ".$c;
+echo "<br/><select>";
+for ($a=50;$a<=1000;$a++)
+{
+	echo"<option value='".$a."'>".$a."</option>";
+}
+
+echo "</select>";
+?>
+
+</body>
+</html>
